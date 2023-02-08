@@ -1,0 +1,10 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      # build the application image
+      - run: docker build -t yasarui/react .
